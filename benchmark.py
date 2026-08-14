@@ -241,16 +241,18 @@ def main():
     # ------------------------------------------------------------------
     # 3. Huan luyen (do thoi gian)
     # ------------------------------------------------------------------
+    # Dataset chi co 0.172% gian lan (315 positive tren 182k dong train). Voi ty le lech
+    # nhu vay, learning_rate cao + num_leaves lon lam moi cay overfit vao nhum positive
+    # nho xiu, boosting di sai huong va AUC validation TUT DAN theo so cay (do thuc nghiem:
+    # lr=0.05/num_leaves=31 cho AUC 0.83 sau 300 cay, tham chi te hon 1 cay don le).
+    # Bo tham so duoi day regularize manh hon nen mo hinh hoi tu dung: AUC ~0.979.
     hyperparams = {
         "objective": "binary",
         "n_estimators": 1000,
-        "learning_rate": 0.05,
-        "num_leaves": 31,
+        "learning_rate": 0.01,
+        "num_leaves": 15,
         "max_depth": -1,
-        "min_child_samples": 20,
-        "subsample": 0.8,
-        "subsample_freq": 1,
-        "colsample_bytree": 0.8,
+        "min_child_samples": 50,
         "random_state": RANDOM_STATE,
         "n_jobs": -1,
         "verbose": -1,

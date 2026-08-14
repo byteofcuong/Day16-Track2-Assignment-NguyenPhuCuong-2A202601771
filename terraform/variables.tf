@@ -30,9 +30,9 @@ variable "enable_gpu" {
 }
 
 variable "cpu_instance_type" {
-  description = "Instance type for the default CPU (LightGBM) compute node"
+  description = "Instance type for the default CPU (LightGBM) compute node. Lab chi dinh t3.medium (2 vCPU / 4 GB), nhung tai khoan AWS Free Plan chi cho phep launch cac type free-tier-eligible. c7i-flex.large co cung 2 vCPU / 4 GB va nam trong danh sach do, dong thoi la x86_64 nen dung chung Ubuntu AMI amd64"
   type        = string
-  default     = "t3.medium"
+  default     = "c7i-flex.large"
 }
 
 variable "gpu_instance_type" {

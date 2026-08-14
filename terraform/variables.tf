@@ -4,6 +4,12 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+variable "my_ip_cidr" {
+  description = "CIDR duoc phep SSH vao Bastion Host. Mac dinh la IP public cua nguoi lam lab (least-privilege thay vi mo 0.0.0.0/0)"
+  type        = string
+  default     = "203.171.27.42/32"
+}
+
 variable "hf_token" {
   description = "Hugging Face Token for gated models (like Gemma)"
   type        = string

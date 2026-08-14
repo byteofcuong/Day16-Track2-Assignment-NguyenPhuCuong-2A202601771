@@ -102,6 +102,4 @@ Toàn bộ tài nguyên đã được xóa bằng `terraform destroy` ngay sau k
 | 4 | Screenshot AWS Billing | `03-aws-billing.png` |
 | 5 | Mã nguồn Terraform | `terraform-source.zip` |
 | 6 | Báo cáo | `REPORT.md` (file này) |
-| — | Script benchmark | `benchmark.py` |
-
-*Phụ lục GPU + LLM (vLLM/Gemma) là phần tùy chọn, không thực hiện.*
+| 7 | Script benchmark | `benchmark.py` |

@@ -4,10 +4,10 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "my_ip_cidr" {
-  description = "CIDR duoc phep SSH vao Bastion Host. Mac dinh la IP public cua nguoi lam lab (least-privilege thay vi mo 0.0.0.0/0)"
-  type        = string
-  default     = "203.171.27.42/32"
+variable "my_ip_cidrs" {
+  description = "Danh sach CIDR duoc phep SSH vao Bastion Host (least-privilege thay vi mo 0.0.0.0/0). Dung /24 thay vi /32 vi ISP cua nguoi lam lab dinh tuyen ra internet qua nhieu IP khac nhau, /32 se bi rot ket noi ngau nhien"
+  type        = list(string)
+  default     = ["203.171.27.0/24", "14.238.145.0/24"]
 }
 
 variable "hf_token" {
